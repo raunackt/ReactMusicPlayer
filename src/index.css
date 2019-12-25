@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Segoe UI";
+  margin: 0px;
+  padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: lightgray;
+}
+
+main {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.player-main-container{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.player-container {
+  background-color: white;
+  display: flex;
+  margin: 10px 0px;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0px 1px 2px 1px gray;
+}
+
+.song-poster {
+  margin: 0px 5px;
+}
+
+.song-details {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.nav-buttons {
+  display: flex;
+  margin: 10px 0px 0px;
+  justify-content: center;
+}
+
+.nav-buttons li {
+  transition: .3s;
+  list-style: none;
+  margin: 0px 5px;
+  padding: 10px;
+  width: 64px;
+  cursor: pointer;
+}
+
+.nav-buttons li:hover{
+  transition: .3s;
+  background-color: lightgray;
+}
+
+.song-list-container{
+  width: 65%;
+  margin: 10px auto;
+}
+
+.song-item{
+  transition: .2s;
+  display: flex;
+  margin: 10px 0px;
+  padding: 5px 10px;
+  box-shadow: 0px 1px 2px 1px gray;
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+
+.song-item:hover{
+  transition: .2s;
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.02, 1.02);
+}
+
+.song-item img{
+  margin: 0px 10px;
+}
+
+.song-item-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#songDur{
+  appearance: none;
+  outline: none;
+  height: 10px;
+  background-color: rgb(46, 101, 173);
+  margin: 5px 0px;
+  width: 90%;
+  cursor: pointer;
+  border-radius:5px;
+}
+
+#songDur::-webkit-slider-thumb{
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+@media (min-width: 320px) and (max-width: 640px){
+  main{
+    width: 100%;
+  }
+
+  .nav-buttons li{
+    width: 32px;
+  }
+
+  .song-list-container{
+    width: 90%;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 850px){
+  main{
+    width: 75%;
+  }
+
+  .nav-buttons li{
+    width: 32px;
+  }
 }
