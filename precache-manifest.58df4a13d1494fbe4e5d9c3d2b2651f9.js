@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0aa3b3fb72d9f7b863f53eea6678e88c",
+    "revision": "574380474a38c4a6f60f6c2b58b84859",
     "url": "/ReactMusicPlayer/index.html"
   },
   {
-    "revision": "129ffccc392042007c79",
+    "revision": "4ce36a06234cb819f90d",
     "url": "/ReactMusicPlayer/static/css/main.ac7f9c79.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactMusicPlayer/static/js/2.01fc9c07.chunk.js.LICENSE"
   },
   {
-    "revision": "129ffccc392042007c79",
-    "url": "/ReactMusicPlayer/static/js/main.b9ab52d8.chunk.js"
+    "revision": "4ce36a06234cb819f90d",
+    "url": "/ReactMusicPlayer/static/js/main.82f3656c.chunk.js"
   },
   {
     "revision": "a27e4740e00afbd6869f",
