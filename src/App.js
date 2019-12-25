@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Player from "./components/Player";
 import songOne from "./songs/song-1.mp3";
 import songTwo from "./songs/song-2.mp3";
@@ -154,8 +154,6 @@ function App() {
   const songSrc = songsList[currentSongIndex].song;
   const songNameSrc = songsList[currentSongIndex].songName;
   const posterSrc = songsList[currentSongIndex].songPoster;
-
-  useEffect(() => console.log(currentSongIndex), [currentSongIndex]);
 
   return (
     <main>
