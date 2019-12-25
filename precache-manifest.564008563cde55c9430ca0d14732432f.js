@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "574380474a38c4a6f60f6c2b58b84859",
+    "revision": "79d8a905025717fc543dceb03c3ae3b3",
     "url": "/ReactMusicPlayer/index.html"
   },
   {
