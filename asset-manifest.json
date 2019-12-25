@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/React-Music-Player/static/css/main.ac7f9c79.chunk.css",
+    "main.js": "/React-Music-Player/static/js/main.ddbb7377.chunk.js",
+    "main.js.map": "/React-Music-Player/static/js/main.ddbb7377.chunk.js.map",
+    "runtime-main.js": "/React-Music-Player/static/js/runtime-main.31ec9068.js",
+    "runtime-main.js.map": "/React-Music-Player/static/js/runtime-main.31ec9068.js.map",
+    "static/js/2.01fc9c07.chunk.js": "/React-Music-Player/static/js/2.01fc9c07.chunk.js",
+    "static/js/2.01fc9c07.chunk.js.map": "/React-Music-Player/static/js/2.01fc9c07.chunk.js.map",
+    "index.html": "/React-Music-Player/index.html",
+    "precache-manifest.ab1170afa675ebf90ede3215e472dda0.js": "/React-Music-Player/precache-manifest.ab1170afa675ebf90ede3215e472dda0.js",
+    "service-worker.js": "/React-Music-Player/service-worker.js",
+    "static/css/main.ac7f9c79.chunk.css.map": "/React-Music-Player/static/css/main.ac7f9c79.chunk.css.map",
+    "static/js/2.01fc9c07.chunk.js.LICENSE": "/React-Music-Player/static/js/2.01fc9c07.chunk.js.LICENSE",
+    "static/media/pos-1.jpg": "/React-Music-Player/static/media/pos-1.c3fc4b84.jpg",
+    "static/media/pos-10.jpeg": "/React-Music-Player/static/media/pos-10.1d7abb9c.jpeg",
+    "static/media/pos-2.jpg": "/React-Music-Player/static/media/pos-2.67e141ce.jpg",
+    "static/media/pos-3.jpg": "/React-Music-Player/static/media/pos-3.38aaaeae.jpg",
+    "static/media/pos-4.png": "/React-Music-Player/static/media/pos-4.1db19f28.png",
+    "static/media/pos-5.jpeg": "/React-Music-Player/static/media/pos-5.bf72f6cf.jpeg",
+    "static/media/pos-6.jpg": "/React-Music-Player/static/media/pos-6.08ee2699.jpg",
+    "static/media/pos-7.jpg": "/React-Music-Player/static/media/pos-7.ba5078df.jpg",
+    "static/media/pos-8.jpeg": "/React-Music-Player/static/media/pos-8.70de8b7c.jpeg",
+    "static/media/pos-9.jpg": "/React-Music-Player/static/media/pos-9.39800881.jpg",
+    "static/media/song-1.mp3": "/React-Music-Player/static/media/song-1.c8d594ea.mp3",
+    "static/media/song-10.mp3": "/React-Music-Player/static/media/song-10.63cc0a84.mp3",
+    "static/media/song-2.mp3": "/React-Music-Player/static/media/song-2.e175412e.mp3",
+    "static/media/song-3.mp3": "/React-Music-Player/static/media/song-3.78d8e9ad.mp3",
+    "static/media/song-4.mp3": "/React-Music-Player/static/media/song-4.780462c2.mp3",
+    "static/media/song-5.mp3": "/React-Music-Player/static/media/song-5.80276ac2.mp3",
+    "static/media/song-6.mp3": "/React-Music-Player/static/media/song-6.c8541ce6.mp3",
+    "static/media/song-7.mp3": "/React-Music-Player/static/media/song-7.b7303a02.mp3",
+    "static/media/song-8.mp3": "/React-Music-Player/static/media/song-8.c3709ca6.mp3",
+    "static/media/song-9.mp3": "/React-Music-Player/static/media/song-9.a2c312cc.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.31ec9068.js",
+    "static/js/2.01fc9c07.chunk.js",
+    "static/css/main.ac7f9c79.chunk.css",
+    "static/js/main.ddbb7377.chunk.js"
+  ]
+}
