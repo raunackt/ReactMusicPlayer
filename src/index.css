@@ -4,7 +4,7 @@
   padding: 0px;
 }
 
-body{
+body {
   background-color: lightgray;
 }
 
@@ -13,7 +13,7 @@ main {
   margin: 0px auto;
 }
 
-.player-main-container{
+.player-main-container {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -44,7 +44,7 @@ main {
 }
 
 .nav-buttons li {
-  transition: .3s;
+  transition: 0.3s;
   list-style: none;
   margin: 0px 5px;
   padding: 10px;
@@ -52,18 +52,19 @@ main {
   cursor: pointer;
 }
 
-.nav-buttons li:hover{
-  transition: .3s;
+.nav-buttons li:hover {
+  transition: 0.3s;
   background-color: lightgray;
 }
 
-.song-list-container{
+.song-list-container {
   width: 65%;
   margin: 10px auto;
 }
 
-.song-item{
-  transition: .2s;
+.song-item,
+.song-item-playing {
+  transition: 0.2s;
   display: flex;
   margin: 10px 0px;
   padding: 5px 10px;
@@ -72,34 +73,42 @@ main {
   cursor: pointer;
 }
 
-.song-item:hover{
-  transition: .2s;
-  background-color: rgb(255, 255, 255);
-  transform: scale(1.02, 1.02);
+.song-item-playing {
+  color: white;
+  background-color: rgb(46, 101, 173);
 }
 
-.song-item img{
+.song-item:hover,
+.song-item-playing:hover {
+  transition: 0.2s;
+  color: white;
+  background-color: rgb(84, 149, 235);
+  box-shadow: 0px 1px 10px 1px gray;
+}
+
+.song-item img,
+.song-item-playing img {
   margin: 0px 10px;
 }
 
-.song-item-details{
+.song-item-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#songDur{
+#songDur {
   appearance: none;
   outline: none;
   height: 10px;
   background-color: rgb(46, 101, 173);
-  margin: 5px 0px;
-  width: 90%;
+  margin: 5px 10px;
+  width: 75%;
   cursor: pointer;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
-#songDur::-webkit-slider-thumb{
+#songDur::-webkit-slider-thumb {
   appearance: none;
   height: 24px;
   width: 24px;
@@ -108,26 +117,26 @@ main {
   background-color: white;
 }
 
-@media (min-width: 320px) and (max-width: 640px){
-  main{
+@media (min-width: 320px) and (max-width: 640px) {
+  main {
     width: 100%;
   }
 
-  .nav-buttons li{
+  .nav-buttons li {
     width: 32px;
   }
 
-  .song-list-container{
+  .song-list-container {
     width: 90%;
   }
 }
 
-@media (min-width: 650px) and (max-width: 850px){
-  main{
+@media (min-width: 650px) and (max-width: 850px) {
+  main {
     width: 75%;
   }
 
-  .nav-buttons li{
+  .nav-buttons li {
     width: 32px;
   }
 }

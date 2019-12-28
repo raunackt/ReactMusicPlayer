@@ -43,10 +43,11 @@ function App() {
     else if (cSI < 0) cSI = songsList.length - 1;
     const oldAudioObj = audioObj;
     oldAudioObj.pause();
-    oldAudioObj.removeAttribute("src");
-    oldAudioObj.load();
     const newAudioObj = new Audio();
     newAudioObj.src = songsList[cSI].song;
+    if (newAudioObj.src === oldAudioObj.src)
+      newAudioObj.currentTime = currentSongTime;
+    oldAudioObj.removeAttribute("src");
     setCurrentSongIndex(cSI);
     newAudioObj.onloadeddata = () => {
       if (newAudioObj.readyState > 2) {
@@ -75,8 +76,6 @@ function App() {
   const songNameSrc = songsList[currentSongIndex].songName;
   const posterSrc = songsList[currentSongIndex].songPoster;
 
-  useEffect(() => console.log(currentSongIndex), [currentSongIndex]);
-
   return (
     <main>
       <Player
@@ -95,6 +94,7 @@ function App() {
       />
       <SongsList
         songsArray={songsList}
+        currentSongIndex = {currentSongIndex}
         onPlayOrPause={index => playSong(index)}
       />
     </main>

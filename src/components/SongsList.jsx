@@ -1,10 +1,18 @@
 import React from "react";
 
 function SongsList(props) {
+  const getClassName = i => {
+    return i === props.currentSongIndex ? "song-item-playing" : "song-item";
+  };
+
   return (
     <div className="song-list-container">
       {props.songsArray.map((songItem, index) => (
-        <div className="song-item" key={songItem.song} onClick ={() => props.onPlayOrPause(index)} >
+        <div
+          className={getClassName(index)}
+          key={songItem.song}
+          onClick={() => props.onPlayOrPause(index)}
+        >
           <img
             src={songItem.songPoster}
             alt="Song Poster"

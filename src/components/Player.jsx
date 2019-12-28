@@ -40,6 +40,10 @@ function Player(props) {
               <img src={nextButton} alt="Next Button" />
             </li>
           </div>
+          <span>
+            {calculateMinutes(props.currentSongTime)}:
+            {calculateSeconds(props.currentSongTime)}
+          </span>
           <input
             type="range"
             min="0"
@@ -48,11 +52,9 @@ function Player(props) {
             value={props.currentSongTime}
             onChange={ev => props.onDurationChange(ev.target.value)}
           />
-          <p>
-            {calculateMinutes(props.currentSongTime)}:
-            {calculateSeconds(props.currentSongTime)} /{" "}
+          <span>
             {calculateMinutes(props.songDur)}:{calculateSeconds(props.songDur)}
-          </p>
+          </span>
         </div>
       </div>
     </div>
