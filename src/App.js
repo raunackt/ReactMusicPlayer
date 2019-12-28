@@ -94,7 +94,7 @@ function App() {
       />
       <SongsList
         songsArray={songsList}
-        currentSongIndex = {currentSongIndex}
+        currentSongIndex={currentSongIndex}
         onPlayOrPause={index => playSong(index)}
       />
     </main>

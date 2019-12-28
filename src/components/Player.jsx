@@ -2,60 +2,31 @@ import React from "react";
 
 import nextButton from "../img/buttons/next.png";
 import prevButton from "../img/buttons/prev.png";
+import SongPoster from "./SongPoster";
+import SongDetails from "./SongDetails";
+import DurationComp from "./DurationComp";
 
 function Player(props) {
-  const calculateMinutes = dur => {
-    return Math.floor(dur / 60)
-      .toString()
-      .padStart(2, "0");
-  };
-
-  const calculateSeconds = dur => {
-    return Math.floor(dur % 60)
-      .toString()
-      .padStart(2, "0");
-  };
-
   return (
     <div className="player-main-container">
+      <SongPoster songPoster={props.songPoster} />
       <div className="player-container">
-        <div className="song-poster">
-          <img
-            src={props.songPoster}
-            alt="Song Post"
-            width="128px"
-            height="128px"
-          />
-        </div>
-        <div className="song-details">
-          <h2>{props.songName}</h2>
-          <div className="nav-buttons">
-            <li onClick={props.onPrev}>
-              <img src={prevButton} alt="Previous Button" />
-            </li>
-            <li onClick={props.onPlayOrPause}>
-              <img src={props.buttonState} alt="Play Button" />
-            </li>
-            <li onClick={props.onNext}>
-              <img src={nextButton} alt="Next Button" />
-            </li>
-          </div>
-          <span>
-            {calculateMinutes(props.currentSongTime)}:
-            {calculateSeconds(props.currentSongTime)}
-          </span>
-          <input
-            type="range"
-            min="0"
-            max={props.totalTime}
-            id="songDur"
-            value={props.currentSongTime}
-            onChange={ev => props.onDurationChange(ev.target.value)}
-          />
-          <span>
-            {calculateMinutes(props.songDur)}:{calculateSeconds(props.songDur)}
-          </span>
-        </div>
+        
+        <SongDetails
+          songName={props.songName}
+          prevButton={prevButton}
+          nextButton={nextButton}
+          buttonState={props.buttonState}
+          onPrev={props.onPrev}
+          onPlayOrPause={props.onPlayOrPause}
+          onNext={props.onNext}
+        />
+        <DurationComp
+          totalTime={props.totalTime}
+          currentSongTime={props.currentSongTime}
+          songDur = {props.songDur}
+          onDurationChange={e => props.onDurationChange(e)}
+        />
       </div>
     </div>
   );

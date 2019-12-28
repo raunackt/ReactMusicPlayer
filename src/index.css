@@ -16,16 +16,18 @@ main {
 .player-main-container {
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
-}
-
-.player-container {
-  background-color: white;
   display: flex;
+  top: 0;
+  background-color: white;
+  box-shadow: 0px 1px 2px 1px gray;
   margin: 10px 0px;
   align-items: center;
   padding: 5px;
-  box-shadow: 0px 1px 2px 1px gray;
+}
+
+.player-container {
+  width: 95%;
+  margin: 0px 5px;
 }
 
 .song-poster {
@@ -69,20 +71,21 @@ main {
   margin: 10px 0px;
   padding: 5px 10px;
   box-shadow: 0px 1px 2px 1px gray;
-  background-color: rgb(235, 235, 235);
+  background-color: gray;
+  color: white;
   cursor: pointer;
 }
 
 .song-item-playing {
-  color: white;
-  background-color: rgb(46, 101, 173);
+  color: black;
+  background-color: white;
 }
 
 .song-item:hover,
 .song-item-playing:hover {
   transition: 0.2s;
   color: white;
-  background-color: rgb(84, 149, 235);
+  background-color: lightgray;
   box-shadow: 0px 1px 10px 1px gray;
 }
 
