@@ -59,6 +59,10 @@ main {
   background-color: lightgray;
 }
 
+.duration{
+  display: flex;
+}
+
 .song-list-container {
   width: 65%;
   margin: 10px auto;
