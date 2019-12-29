@@ -64,32 +64,36 @@ main {
 }
 
 .song-list-container {
-  width: 65%;
+  width: 60%;
   margin: 10px auto;
 }
 
-.song-item,
-.song-item-playing {
+.status{
+  display: flex;
+  align-items: center;
+}
+
+.song-item{
   transition: 0.2s;
   display: flex;
-  margin: 10px 0px;
+  margin: 8px 0px;
   padding: 5px 10px;
   box-shadow: 0px 1px 2px 1px gray;
-  background-color: gray;
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 
-.song-item-playing {
-  color: black;
-  background-color: white;
+.song-not-playing{
+  opacity: 0;
 }
 
-.song-item:hover,
-.song-item-playing:hover {
+.song-playing {
+  opacity: 1;
+}
+
+.song-item:hover{
   transition: 0.2s;
-  color: white;
-  background-color: lightgray;
   box-shadow: 0px 1px 10px 1px gray;
 }
 

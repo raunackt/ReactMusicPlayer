@@ -48,18 +48,19 @@ export default () => {
     if (newAudioObj.src === oldAudioObj.src)
       newAudioObj.currentTime = currentSongTime;
     oldAudioObj.removeAttribute("src");
-    setCurrentSongIndex(cSI);
     newAudioObj.onloadeddata = () => {
       if (newAudioObj.readyState > 2) {
         newAudioObj.play();
         setTotalTime(newAudioObj.duration);
         setSongDur(newAudioObj.duration);
+        setCurrentSongIndex(cSI);
       }
     };
 
     newAudioObj.ontimeupdate = () => {
       setCurrentSongTime(newAudioObj.currentTime);
     };
+
     setAudioObj(newAudioObj);
     setIsPlaying(true);
     setButtonState(pauseButton);
@@ -94,9 +95,10 @@ export default () => {
       />
       <SongsList
         songsArray={songsList}
+        playIcon={playButton}
         currentSongIndex={currentSongIndex}
         onPlayOrPause={index => playSong(index)}
       />
     </main>
   );
-}
+};
