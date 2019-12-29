@@ -5,7 +5,7 @@ import playButton from "./img/buttons/play.png";
 import pauseButton from "./img/buttons/pause.png";
 import ResourcesArray from "./components/ResourcesArray";
 
-function App() {
+export default () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [audioObj, setAudioObj] = useState(new Audio());
   const [buttonState, setButtonState] = useState(playButton);
@@ -100,5 +100,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

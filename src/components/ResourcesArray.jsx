@@ -19,7 +19,7 @@ import songEightPoster from "../img/posters/pos-8.jpeg";
 import songNinePoster from "../img/posters/pos-9.jpg";
 import songTenPoster from "../img/posters/pos-10.jpeg";
 
-function ResourcesArray() {
+export default () => {
   return [
     {
       song: songOne,
@@ -83,5 +83,3 @@ function ResourcesArray() {
     }
   ];
 }
-
-export default ResourcesArray;
