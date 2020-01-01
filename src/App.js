@@ -5,7 +5,7 @@ import playButton from "./img/buttons/play.png";
 import pauseButton from "./img/buttons/pause.png";
 import ResourcesArray from "./components/ResourcesArray";
 
-export default () => {
+export default function App() {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [audioObj, setAudioObj] = useState(new Audio());
   const [buttonState, setButtonState] = useState(playButton);
@@ -39,6 +39,9 @@ export default () => {
   };
 
   const playSong = (cSI = 0) => {
+    console.log(currentSongIndex)
+    setCurrentSongIndex(cSI);
+    console.log(currentSongIndex)
     if (cSI > songsList.length - 1) cSI = 0;
     else if (cSI < 0) cSI = songsList.length - 1;
     const oldAudioObj = audioObj;
@@ -53,12 +56,16 @@ export default () => {
         newAudioObj.play();
         setTotalTime(newAudioObj.duration);
         setSongDur(newAudioObj.duration);
-        setCurrentSongIndex(cSI);
       }
     };
 
     newAudioObj.ontimeupdate = () => {
       setCurrentSongTime(newAudioObj.currentTime);
+    };
+
+    newAudioObj.onended = () => {
+      let cAI = currentSongIndex;
+      playSong(++cAI);
     };
 
     setAudioObj(newAudioObj);
@@ -101,4 +108,4 @@ export default () => {
       />
     </main>
   );
-};
+}
